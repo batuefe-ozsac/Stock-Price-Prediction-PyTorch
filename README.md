@@ -8,7 +8,7 @@ An end-to-end Deep Learning project designed to predict Microsoft Corporation (M
 
 
 <details>
-  <summary>👉 <b>Click here to watch the 2-minute project presentation</b></summary>
+  <summary>👉 <b>Click here to watch the project presentation</b></summary>
   <br>
   
   https://github.com/user-attachments/assets/721478e0-51f7-414e-a45e-3eb927557029
