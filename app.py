@@ -36,8 +36,17 @@ with open('msft_scaler.pkl', 'rb') as f:
 @app.route('/predict', methods=['GET'])
 def predict_tomorrow():
     try:
-        # Fetch the real-time last 20 days of MSFT
-        data = yf.download('MSFT', period='1mo')
+        # Fetch the real-time last 20 days of MSFT using the more robust Ticker module
+        msft = yf.Ticker("MSFT")
+        data = msft.history(period="1mo")
+        
+        # Güvenlik Kontrolü: Yahoo Finance veriyi engellerse sistemi çökertme, uyarı ver
+        if data.empty:
+            return jsonify({
+                "status": "error", 
+                "message": "Cloud IP blocked by Yahoo Finance or data is unavailable. Please try again later."
+            })
+
         last_20_days = data['Close'].values[-20:].reshape(-1, 1)
         
         # Translate to [-1, 1] and convert to PyTorch Tensor
