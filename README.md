@@ -4,6 +4,12 @@ An end-to-end Deep Learning project designed to predict Microsoft Corporation (M
 
 🔴 **LIVE API ENDPOINT:** https://msft-prediction-api.onrender.com/predict
 
+## 🎥 Project Presentation
+
+https://github.com/user-attachments/assets/d6db6f1a-1959-4c2e-a01a-5d9994db6724
+
+
+
 ## 🧠 Project Overview
 Predicting stock market trends is notoriously difficult due to the chaotic nature of financial data. Traditional models often fail to capture long-term dependencies. This project utilizes an **LSTM Network** built from scratch in PyTorch to analyze the last 20 days of MSFT stock history and predict the next day's closing price.
 
